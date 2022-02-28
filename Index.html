@@ -2,16 +2,23 @@
   <head>
     <link rel="stylesheet" href="Style.css" />
     <script>
-      console.log("testing");
+      var score = document.getElementById("score").value;
+      var total = document.getElementById("total").value;
+      var percentage = (score / total) * 100
+      console.log(percentage)
+      function func() {
+        console.log(score)
+        console.log(total )
+        console.log(percentage)
+      }
     </script>
     <body id="background">
       <div class="title"><b>Grade Calculator</b></div>
-      
-      <label class="custom-field">
-        <input type="text" placeholder="" id="input">
-        <span class="placeholder">Enter text</span>
-      </label>
+      <div class="inputs">
+        <input type="text" placeholder="Input what you got" class="input" id="score">
+        <input type="text" placeholder="Input what it was out of" class="input" id="total">
       </div>
+      <button onclick="func();">Press me</button>
     </body>
   </head>
 </html>
