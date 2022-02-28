@@ -2,23 +2,39 @@
   <head>
     <link rel="stylesheet" href="Style.css" />
     <script>
-      var score = document.getElementById("score").value;
-      var total = document.getElementById("total").value;
-      var percentage = (score / total) * 100
-      console.log(percentage)
       function func() {
+        var score = document.getElementById("score").value;
+        var total = document.getElementById("total").value;
+        var slider = document.getElementById("sliders").value
+        // 1 is test 1
+        //2 is unkown
+        //3 is test 2
+
+        var percentage = (score / total) * 100
         console.log(score)
         console.log(total )
         console.log(percentage)
+        console.log(slider)
       }
     </script>
     <body id="background">
       <div class="title"><b>Grade Calculator</b></div>
-      <div class="inputs">
+      <form class="inputs">
         <input type="text" placeholder="Input what you got" class="input" id="score">
         <input type="text" placeholder="Input what it was out of" class="input" id="total">
+      </form>
+      <div class="Sliderinfo">
+        <h2>Move the slider to the left for test 1 to the middle for unknown and to the right for test 2</h2>
       </div>
-      <button onclick="func();">Press me</button>
+      <input type="range" min="1" max="3" class="slider" id="sliders">
+      <br>
+      <form class="options">
+        <select name="subjects" id="subjects">
+          <option value=""></option>
+        </select>
+
+      </form>
+      <button onclick="func()">test</button>
     </body>
   </head>
 </html>
