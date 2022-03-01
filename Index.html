@@ -2,7 +2,6 @@
   <head>
     <link rel="stylesheet" href="Style.css" />
     <script>
-      var snd = new Audio("file.wav");
       function func() {
         var score = document.getElementById("score").value;
         var total = document.getElementById("total").value;
@@ -14,7 +13,8 @@
         console.log(score);
         console.log(total);
         console.log(percentage);
-        
+        var thing = document.getElementById("testing").innerHTML
+        console.log(thing)
       }
     </script>
     <body id="background">
@@ -33,12 +33,14 @@
           class="input"
           id="total"
         /></div>
-        <button type="button" onclick="func()">Press me daddy</button>
         <br />
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider-round"></span>
-        </label>
+        <div class="testcont">
+          <div class="FHC">
+            <button type="button" class="testb" onclick="func()" id="HIGHER">HIGHER</button>
+          </div>
+          <div class="FHC">
+            <button type="button" class="testb" onclick="func()" id="FOUNDATION">FOUNDATION</button>
+        </div>
 
 
         </div>

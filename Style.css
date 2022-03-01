@@ -1,15 +1,18 @@
 #background {
   font-family: monospace;
-  background-image: url(Wave2.png);
+  background-color: b2ffd6;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
 }
 #box {
-  border-color: black;
-  border-width: 4px;
+  border-color: d7fdf0;
+  border-width: 8px;
   border-style: solid;
+  margin: auto;
+  width: 60%;
+  height: 80%;
 }
 .title {
   color: black;
@@ -41,6 +44,7 @@
   border: none;
   border: none;
   border-radius: 7px;
+  margin-top: 20%;
   transition: width 0.4s ease-in-out;
   outline: none;
   transition: width 0.4s ease;
@@ -50,4 +54,35 @@
 }
 .input:focus {
   width: 55%;
+  border-bottom: black 1.5px solid;
+}
+.testcont {
+  width: 40%;
+  height: 10%;
+  margin: auto;
+  vertical-align: center;
+}
+.testb {
+  border-radius: 15px;
+  height: 5%;
+  width: 8%;
+  margin-top: 10px;
+  margin-left: auto;
+  transition: width .4s ease-in-out;
+  background-color: transparent;
+  text-shadow: 1px 1px white;
+}
+.testb:hover {
+  background-color: #e0ffff;
+  border-color: #e0ffff;
+}
+#Higher {
+  position: absolute;
+  margin-left: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#foundation {
+  margin-left:260px;
+  position: absolute;
 }
