@@ -7,7 +7,7 @@
   height: 100%;
 }
 #box {
-  border-color: #b2ffd6;
+  border-color: black;
   border-width: 4px;
   border-style: solid;
 }
@@ -20,7 +20,7 @@
   margin: auto;
   text-align: center;
   height: 5%;
-  font-size: 40px;
+  font-size: 60px;
   padding: 10px;
   background-color: #b2ffd6;
   text-shadow: 2px 2px white;
@@ -39,12 +39,15 @@
   width: 40%;
   height: 4%;
   border: none;
-  border-bottom: 2px solid black;
+  border: none;
+  border-radius: 7px;
   transition: width 0.4s ease-in-out;
   outline: none;
   transition: width 0.4s ease;
+  background-color: transparent;
+  background-color: #d7fdf0;
+  text-align: left;
 }
 .input:focus {
   width: 55%;
-  background-color: transparent;
 }
