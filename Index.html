@@ -12,9 +12,17 @@
         var percentage = (score / total) * 100;
         console.log(score);
         console.log(total);
-        console.log(percentage);
-        var thing = document.getElementById("testing").innerHTML
-        console.log(thing)
+        console.log(percentage);  
+
+      }
+      function colorH() {
+        document.getElementById("Higher").style.backgroundColor = '#26ed86';
+        document.getElementById("Higher").style.border = 'none';
+      }
+      function colorF() {
+        document.getElementById("Foundation").style.backgroundColor = '#26ed86';
+        document.getElementById("Foundation").style.border = 'none';
+        
       }
     </script>
     <body id="background">
@@ -34,13 +42,12 @@
           id="total"
         />
       </div>
-      
-      <div class="holder">
-        <button type="button" class="testb" onclick="func()" id="HIGHER">HIGHER</button>
+      <div class="holding">
+        <button type="button" class="button" id="Higher" onclick="colorH(); func(); ">HIGHER</button>
+        <button class="button" id="Foundation" type="button" onclick="colorF(); func();">FOUNDATION</button>
       </div>
-      <div class="holder">
-        <button type="button" class="testb" onclick="func()" id="HIGHER">HIGHER</button>
-      </div>
+
+
 
 
         </div>
