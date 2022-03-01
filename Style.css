@@ -60,29 +60,18 @@
   width: 40%;
   height: 10%;
   margin: auto;
-  vertical-align: center;
 }
 .testb {
   border-radius: 15px;
   height: 5%;
   width: 8%;
-  margin-top: 10px;
-  margin-left: auto;
+  margin-top: 150px;
   transition: width .4s ease-in-out;
   background-color: transparent;
   text-shadow: 1px 1px white;
+  position: absolute;
 }
 .testb:hover {
   background-color: #e0ffff;
   border-color: #e0ffff;
-}
-#Higher {
-  position: absolute;
-  margin-left: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-#foundation {
-  margin-left:260px;
-  position: absolute;
 }
