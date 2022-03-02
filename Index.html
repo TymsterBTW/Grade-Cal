@@ -2,19 +2,6 @@
   <head>
     <link rel="stylesheet" href="Style.css" />
     <script>
-      function func() {
-        var score = document.getElementById("score").value;
-        var total = document.getElementById("total").value;
-        // 1 is test 1
-        //2 is unkown
-        //3 is test 2
-
-        var percentage = (score / total) * 100;
-        console.log(score);
-        console.log(total);
-        console.log(percentage);  
-
-      }
       function ColorHigher() {
         var color = document.getElementById("Higher");
 
@@ -88,16 +75,32 @@
         if (color.classList.contains("disabled")) {
           color.classList.remove("disabled");
           color.classList.add("enabled");
+          setTimeout(() => {color.classList.add("disabled"); color.classList.remove("enabled"); }, 800);
         }
-        else {
-          color.classList.remove("enabled");
-          color.classList.add("disabled");
-        }
+
       }
       function test() {
         document.getElementById("something").innerHTML = '10';
+        }
+      
+      function GCalc() {
+        var HorH = false
+        if (document.getElementById("Higher").classList.contains("enabled")){
+          HigherP = true
+        }
+        else {
+          var HigherP = false
+        }
+        if (document.getElementById("Test1").classList.contains("enabled")){
+          var test1 = 1
+        }
+        else {
+          var test1 = 0
+        }
+        console.log(HigherP)
+        console.log(test1)
       }
-
+        console.log(10)
     </script>
     <body id="background">
       <div id="box">
@@ -126,7 +129,7 @@
 
       </div>
       <div class="sujectH">
-          <select name="subject" id="subject">
+          <select name="subject" id="subject" style="background-color: #81e6c4;">
             <option value="Ma">Maths</option>
             <option value="EnLi">English Literature</option>
             <option value="EnLa">English Language</option>
@@ -139,7 +142,7 @@
 
       </div>
       <div class="calc">
-        <button type="button" class="button disabled" id="calcu" onclick="colorcal()">Calculate</button>
+        <button type="button" class="buttonC disabled" id="calcu" onclick="colorcal(); GCalc();">Calculate</button>
       </div>
       <div class="output">
         <p id="Result">Your result is a Grade : <p id="something"></p></p>

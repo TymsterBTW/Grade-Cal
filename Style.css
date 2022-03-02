@@ -118,6 +118,7 @@
   transition: 0.2s ease-in-out;
   text-align: center;
   cursor: pointer;
+  border: 3px #47cca0 solid;
 }
 #HIGHER {
   margin-left: 0px;
@@ -134,17 +135,15 @@
   margin-left: 43%;
   text-align: left;
   width: 14%;
-  height: 40px;
+  height: 42px;
   border: none;
   color: black;
   border-radius: 5px;
-  box-shadow: 3px 2px black;
   appearance: none;
-  background: url(pngtree-vector-down-arrow-icon-png-image_4184901.jpg) 96%/ 12% no-repeat #eee;
   outline: none;
   cursor: pointer;
   display: inline-block;
-
+  border: 3px #47cca0 solid;
 }
 .output {
   margin-top: 3%;
@@ -166,4 +165,23 @@
   margin-left: auto;
   margin-right: auto;
   height: 10%;
+}
+.buttonC {
+  height: 100%;
+  width: 35%;
+  border: none;
+  position: relative;
+  z-index: 100px;
+  border-radius: 8px;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  cursor: pointer;
+  border: 3px #47cca0 solid;
+}
+.buttonC:hover {
+  background-color: transparent;
+  border: 3px black solid;
+
+  box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.1),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
