@@ -32,14 +32,14 @@
   width: 40%;
   padding: 10px;
   background-color: #b2ffd6;
-  margin-top: 2%;
+  margin-top: 4%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   border: none;
 }
 .input {
-  width: 40%;
+  width: 42%;
   height: 4%;
   border: none;
   border: none;
@@ -55,11 +55,12 @@
 .input:focus {
   width: 55%;
   border-bottom: black 1.5px solid;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 .input:hover {
-  background-color: e0ffff;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.1),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 .testcont {
   width: 40%;
@@ -71,26 +72,27 @@
   height: 5%;
   width: 8%;
   margin-top: 150px;
-  transition: width .4s ease-in-out;
+  transition: width 0.4s ease-in-out;
   background-color: transparent;
   text-shadow: 1px 1px white;
   position: absolute;
 }
 .testb:hover {
   background-color: #e0ffff;
-  border-color: #e0ffff;
 }
 .holding {
   width: 40%;
   height: 7.5%;
   margin: auto;
   padding: 10px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .button:hover {
   background-color: transparent;
-  border: #d7fdf1bb;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  border: 3px black solid;
+
+  box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.1),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 .button:visited {
   color: red;
@@ -101,17 +103,18 @@
   width: 35%;
   border: none;
   position: relative;
-  background-color: transparent;
-  border-bottom: 2px black solid;
-  border-left: 2px black solid;
-  z-index: 100px  ;
+  background-color: #d7fdf0;
+  z-index: 100px;
   border-radius: 8px;
-  transition: .7s ease-in-out;
-  text-align: center  ;
+  transition: 0.2s ease-in-out;
+  text-align: center;
 }
 #HIGHER {
   margin-left: 0px;
 }
 #FOUNDATION {
+  margin-left: 27.7%;
+}
+#test2 {
   margin-left: 27.7%;
 }

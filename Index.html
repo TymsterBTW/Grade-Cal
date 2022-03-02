@@ -15,15 +15,19 @@
         console.log(percentage);  
 
       }
-      function colorH() {
-        document.getElementById("Higher").style.backgroundColor = '#26ed86';
-        document.getElementById("Higher").style.border = 'none';
+      function ColorHigher() {
+        var color = Document.getElementById("Higher").style.backgroundColor
+        console.log(color)
+        document.getElementById("Higher").style.backgroundColor = '#40ff9c';}
+      function ColorFoundation() {
+        console.log(Document.getElementById("Foundation").style.backgroundColor)
+        if (document.getElementById("Foundation").style.backgroundColor = '#40ff9c') {
+          document.getElementById("Foundation").style.backgroundColor = '40ff9c';}
+        else {
+          document.getElementById("Foundation").style.backgroundColor = '#40ff9c';
+        }
       }
-      function colorF() {
-        document.getElementById("Foundation").style.backgroundColor = '#26ed86';
-        document.getElementById("Foundation").style.border = 'none';
-        
-      }
+
     </script>
     <body id="background">
       <div id="box">
@@ -42,9 +46,14 @@
           id="total"
         />
       </div>
-      <div class="holding">
-        <button type="button" class="button" id="Higher" onclick="colorH(); func(); ">HIGHER</button>
-        <button class="button" id="Foundation" type="button" onclick="colorF(); func();">FOUNDATION</button>
+      <div class="holding HF">
+        <button type="button" class="button" id="Higher" onclick="ColorHigher();">HIGHER</button>
+        <button class="button" id="Foundation" type="button" onclick="ColorFoundation();">FOUNDATION</button>
+      </div>
+      <div class="Holding Test">
+        <button type="button" class="button" id="Test1" onclick=" ">Test 1</button>
+        <button type="button" class="button" id="Test2" onclick="">Test 2</button>
+
       </div>
 
 
