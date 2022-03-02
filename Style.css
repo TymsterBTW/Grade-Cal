@@ -117,6 +117,7 @@
   border-radius: 8px;
   transition: 0.2s ease-in-out;
   text-align: center;
+  cursor: pointer;
 }
 #HIGHER {
   margin-left: 0px;
@@ -127,5 +128,42 @@
 #test2 {
   margin-left: 27.7%;
 }
+#subject {
+  padding: 10px;
+  font-size: 13px;
+  margin-left: 43%;
+  text-align: left;
+  width: 14%;
+  height: 40px;
+  border: none;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 3px 2px black;
+  appearance: none;
+  background: url(pngtree-vector-down-arrow-icon-png-image_4184901.jpg) 96%/ 12% no-repeat #eee;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+
+}
 .output {
+  margin-top: 3%;
+  background-color: #81e6c4;
+  border-radius: 5px;
+  border: 3px #47cca0 solid;
+  text-align: center;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10%;
+
+
+}
+.calc {
+  margin-top: 2%;
+  text-align: center;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 10%;
 }

@@ -83,6 +83,20 @@
 
 
       }
+      function colorcal() {
+        var color = document.getElementById("calcu")
+        if (color.classList.contains("disabled")) {
+          color.classList.remove("disabled");
+          color.classList.add("enabled");
+        }
+        else {
+          color.classList.remove("enabled");
+          color.classList.add("disabled");
+        }
+      }
+      function test() {
+        document.getElementById("something").innerHTML = '10';
+      }
 
     </script>
     <body id="background">
@@ -103,16 +117,32 @@
         />
       </div>
       <div class="holding HF">
-        <button type="button" class="button disabled" id="Higher" onclick="ColorHigher();">HIGHER</button>
+        <button type="button" class="button disabled" id="Higher" onclick="ColorHigher(); test()">HIGHER</button>
         <button class="button disabled" id="Foundation" type="button" onclick="ColorFoundation();">FOUNDATION</button>
       </div>
       <div class="Holding Test">
         <button type="button" class="button disabled" id="Test1" onclick="colortest1() ">Test 1</button>
-        <button type="button" class="button disabled" id="Test2" onclick="colortest2()">Test 2</button>
+        <button type="button" class="button disabled" id="Test2" onclick="colortest2() ">Test 2</button>
 
       </div>
+      <div class="sujectH">
+          <select name="subject" id="subject">
+            <option value="Ma">Maths</option>
+            <option value="EnLi">English Literature</option>
+            <option value="EnLa">English Language</option>
+            <option value="Ph">Physics</option>
+            <option value="Bi">Biology</option>
+            <option value="Ch">Chemistry</option>
+            <option value="cs">Computer Science</option>
+          </select>
+        </form>
+
+      </div>
+      <div class="calc">
+        <button type="button" class="button disabled" id="calcu" onclick="colorcal()">Calculate</button>
+      </div>
       <div class="output">
-        <p>Your result is</p>
+        <p id="Result">Your result is a Grade : <p id="something"></p></p>
       </div>
 
 
