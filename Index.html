@@ -2,66 +2,60 @@
   <head>
     <link rel="stylesheet" href="Style.css" />
     <script>
+      /*Color for Higher Button */
       function ColorHigher() {
         var color = document.getElementById("Higher");
 
         if (color.classList.contains("disabled")) {
           color.classList.remove("disabled");
           color.classList.add("enabled");
-        }
-        else if(document.getElementById("Foundation").classList.contains("enabled")) {
-          document.getElementById("Foundation").classList.remove("enabled")
-          color.classList.add("enabled")
-
+          document.getElementById("Foundation").classList.remove("enabled");
+          document.getElementById("Foundation").classList.add("disabled");
         }
         else {
           color.classList.remove("enabled");
           color.classList.add("disabled");
         }
       }
+        /*Color for Foundation Button */
       function ColorFoundation() {
         var color = document.getElementById("Foundation");
 
         if (color.classList.contains("disabled")) {
           color.classList.remove("disabled");
           color.classList.add("enabled");
-        }
-        else if(document.getElementById("Higher").classList.contains("enabled")) {
-          document.getElementById("Higher").classList.remove("enabled")
-          color.classList.add("enabled")
+          document.getElementById("Higher").classList.remove("enabled");
+          document.getElementById("Higher").classList.add("disabled");
         }
         else {
           color.classList.remove("enabled");
           color.classList.add("disabled");
         }
       }
+        /*Color for test1 Button */
       function colortest1() {
         var color = document.getElementById("Test1");
 
         if (color.classList.contains("disabled")) {
           color.classList.remove("disabled");
           color.classList.add("enabled");
-        }
-        else if(document.getElementById("Test2").classList.contains("enabled")) {
-          document.getElementById("Test2").classList.remove("enabled")
-          color.classList.add("enabled")
+          document.getElementById("Test2").classList.remove("enabled");
+          document.getElementById("Test2").classList.add("disabled");
         }
         else {
           color.classList.remove("enabled");
           color.classList.add("disabled");
         }
-
       }
+      /* colors for test 2 button*/
       function colortest2() {
         var color = document.getElementById("Test2");
 
         if (color.classList.contains("disabled")) {
           color.classList.remove("disabled");
           color.classList.add("enabled");
-        }
-        else if(document.getElementById("Test1").classList.contains("enabled")) {
-          document.getElementById("Test1").classList.remove("enabled")
-          color.classList.add("enabled")
+          document.getElementById("Test1").classList.remove("enabled");
+          document.getElementById("Test1").classList.add("disabled");
         }
         else {
           color.classList.remove("enabled");
@@ -70,6 +64,7 @@
 
 
       }
+      /*color for calculate button*/ 
       function colorcal() {
         var color = document.getElementById("calcu")
         if (color.classList.contains("disabled")) {
@@ -79,10 +74,7 @@
         }
 
       }
-      function test() {
-        document.getElementById("something").innerHTML = '10';
-        }
-      
+      /*Main code for grade calclator*/
       function GCalc() {
         var HorH = false
         if (document.getElementById("Higher").classList.contains("enabled")){
@@ -97,10 +89,35 @@
         else {
           var test1 = 0
         }
+        var subject = document.getElementById("subject").value;
+            //data for Higher Subjects
+            const maths1 = [85, 68.75, 52.5, 40, 28.75, 22.5, 11.25, 7.5, 3.75,]
+            const maths2 = [15,30,40,50,60,70,80,85,90]
+            const englishliterature1 = [15,30,40,50,60,70,80,85,90]
+            const englishliterature2 = [15,30,40,50,60,70,80,85,90]
+            const englishLanguage1 = [10,20,30,40,50,60,70,80,90]
+            const englishLanguage2 = [10,20,30,40,50,60,70,80,90]
+            const biology1 = [15,30,40,50,60,70,80,85,90]
+            const chemistry1 = [15,30,40,50,60,70,80,85,90]
+            const physics1 = [10,15,24,29,39,50,61,68,76]
+            const physics2 = [8,14,18,22,30,38,47,57,67]
+            const computerscience1 = [15,30,40,50,60,70,80,85,90]
+            const computerscience2 = [15,30,40,50,60,70,80,85,90]
+            function calc(param) {
+                console.log("after func")
+                var percentage = document.getElementById("inputbox").value;
+                for (let i = 0; i < 9; i++) {
+                    if (percentage >= param[i]) {
+                        console.log(param[i])
+                        var answer = i + 1
+                        console.log("it is " + answer)
+                    }
+                }
+            }          
+        console.log(subject)
         console.log(HigherP)
         console.log(test1)
       }
-        console.log(10)
     </script>
     <body id="background">
       <div id="box">
@@ -111,12 +128,14 @@
           placeholder="Input what you got"
           class="input"
           id="score"
+          style="border-right: 2px #47cca0 solid;"
         />
         <input
           type="text"
           placeholder="Input what it was out of"
           class="input"
           id="total"
+          style="border-left: 2px #47cca0 solid;"
         />
       </div>
       <div class="holding HF">
@@ -130,13 +149,13 @@
       </div>
       <div class="sujectH">
           <select name="subject" id="subject" style="background-color: #81e6c4;">
-            <option value="Ma">Maths</option>
-            <option value="EnLi">English Literature</option>
-            <option value="EnLa">English Language</option>
-            <option value="Ph">Physics</option>
-            <option value="Bi">Biology</option>
-            <option value="Ch">Chemistry</option>
-            <option value="cs">Computer Science</option>
+            <option value="Maths">Maths</option>
+            <option value="English Literature">English Literature</option>
+            <option value="English Language">English Language</option>
+            <option value="Physics">Physics</option>
+            <option value="Biology">Biology</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Computer Science">Computer Science</option>
           </select>
         </form>
 

@@ -13,6 +13,8 @@
   margin: auto;
   width: 60%;
   height: 80%;
+  border-radius: 100px;
+  margin-top: 2%;
 }
 .title {
   color: black;
@@ -49,7 +51,7 @@
   outline: none;
   transition: width 0.4s ease;
   background-color: transparent;
-  border-bottom: 2px black solid;
+  border-bottom: 2px #47cca0 solid;
   text-align: left;
 }
 .input:focus {
@@ -88,6 +90,7 @@
 .enabled {
   background-color: #12a358;
   color: white;
+  box-shadow: 0 0  4px 4px #81e6c4;
 }
 
 .holding {
@@ -144,6 +147,7 @@
   cursor: pointer;
   display: inline-block;
   border: 3px #47cca0 solid;
+  box-shadow: 3px 3px 3px 3px #81e6c4;
 }
 .output {
   margin-top: 3%;
@@ -155,8 +159,7 @@
   margin-left: auto;
   margin-right: auto;
   height: 10%;
-
-
+  box-shadow: 3px 3px 3px 3px #81e6c4;
 }
 .calc {
   margin-top: 2%;
@@ -177,6 +180,7 @@
   text-align: center;
   cursor: pointer;
   border: 3px #47cca0 solid;
+  box-shadow: 3px 3px 3px 3px #81e6c4;
 }
 .buttonC:hover {
   background-color: transparent;
