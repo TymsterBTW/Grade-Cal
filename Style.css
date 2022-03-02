@@ -80,6 +80,16 @@
 .testb:hover {
   background-color: #e0ffff;
 }
+
+.disabled {
+  background-color: #81e6c4;
+}
+
+.enabled {
+  background-color: #12a358;
+  color: white;
+}
+
 .holding {
   width: 40%;
   height: 7.5%;
@@ -103,7 +113,6 @@
   width: 35%;
   border: none;
   position: relative;
-  background-color: #d7fdf0;
   z-index: 100px;
   border-radius: 8px;
   transition: 0.2s ease-in-out;
@@ -117,4 +126,6 @@
 }
 #test2 {
   margin-left: 27.7%;
+}
+.output {
 }

@@ -16,16 +16,72 @@
 
       }
       function ColorHigher() {
-        var color = Document.getElementById("Higher").style.backgroundColor
-        console.log(color)
-        document.getElementById("Higher").style.backgroundColor = '#40ff9c';}
-      function ColorFoundation() {
-        console.log(Document.getElementById("Foundation").style.backgroundColor)
-        if (document.getElementById("Foundation").style.backgroundColor = '#40ff9c') {
-          document.getElementById("Foundation").style.backgroundColor = '40ff9c';}
-        else {
-          document.getElementById("Foundation").style.backgroundColor = '#40ff9c';
+        var color = document.getElementById("Higher");
+
+        if (color.classList.contains("disabled")) {
+          color.classList.remove("disabled");
+          color.classList.add("enabled");
         }
+        else if(document.getElementById("Foundation").classList.contains("enabled")) {
+          document.getElementById("Foundation").classList.remove("enabled")
+          color.classList.add("enabled")
+
+        }
+        else {
+          color.classList.remove("enabled");
+          color.classList.add("disabled");
+        }
+      }
+      function ColorFoundation() {
+        var color = document.getElementById("Foundation");
+
+        if (color.classList.contains("disabled")) {
+          color.classList.remove("disabled");
+          color.classList.add("enabled");
+        }
+        else if(document.getElementById("Higher").classList.contains("enabled")) {
+          document.getElementById("Higher").classList.remove("enabled")
+          color.classList.add("enabled")
+        }
+        else {
+          color.classList.remove("enabled");
+          color.classList.add("disabled");
+        }
+      }
+      function colortest1() {
+        var color = document.getElementById("Test1");
+
+        if (color.classList.contains("disabled")) {
+          color.classList.remove("disabled");
+          color.classList.add("enabled");
+        }
+        else if(document.getElementById("Test2").classList.contains("enabled")) {
+          document.getElementById("Test2").classList.remove("enabled")
+          color.classList.add("enabled")
+        }
+        else {
+          color.classList.remove("enabled");
+          color.classList.add("disabled");
+        }
+
+      }
+      function colortest2() {
+        var color = document.getElementById("Test2");
+
+        if (color.classList.contains("disabled")) {
+          color.classList.remove("disabled");
+          color.classList.add("enabled");
+        }
+        else if(document.getElementById("Test1").classList.contains("enabled")) {
+          document.getElementById("Test1").classList.remove("enabled")
+          color.classList.add("enabled")
+        }
+        else {
+          color.classList.remove("enabled");
+          color.classList.add("disabled");
+        }
+
+
       }
 
     </script>
@@ -47,13 +103,16 @@
         />
       </div>
       <div class="holding HF">
-        <button type="button" class="button" id="Higher" onclick="ColorHigher();">HIGHER</button>
-        <button class="button" id="Foundation" type="button" onclick="ColorFoundation();">FOUNDATION</button>
+        <button type="button" class="button disabled" id="Higher" onclick="ColorHigher();">HIGHER</button>
+        <button class="button disabled" id="Foundation" type="button" onclick="ColorFoundation();">FOUNDATION</button>
       </div>
       <div class="Holding Test">
-        <button type="button" class="button" id="Test1" onclick=" ">Test 1</button>
-        <button type="button" class="button" id="Test2" onclick="">Test 2</button>
+        <button type="button" class="button disabled" id="Test1" onclick="colortest1() ">Test 1</button>
+        <button type="button" class="button disabled" id="Test2" onclick="colortest2()">Test 2</button>
 
+      </div>
+      <div class="output">
+        <p>Your result is</p>
       </div>
 
 
