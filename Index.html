@@ -24,11 +24,44 @@
        setTimeout(() => { color.classList.remove("enabled"); color.classList.add("disabled"); }, 800);
      }
       /*Main code for grade calclator*/
+      /*function calc(param) {
+                console.log("after func")
+                var percentage = document.getElementById("inputbox").value;
+                for (let i = 0; i < 9; i++) {
+                    if (percentage >= param[i]) {
+                        console.log(param[i])
+                        var answer = i + 1
+                        console.log("it is " + answer)
+                    }
+                }
+                document.getElementById("result").innerHTML = "Your result is a grade: " + answer
+            }        
+            stuff for later
+             */
       function GradeCalculator(){
+        var Foundation_test1 = []
+        var Foundation_test2 = []
+        var Higher_test1 = []
+        var Higher_test2 = []
+        var Higher = [Higher_test1, Higher_test2]
+        var Foundation = [Foundation_test1,Foundation_test2]
         var percentage = parseInt(document.getElementById('score').value)/parseInt(document.getElementById('total').value) * 100;
-        console.log(document.getElementById('higher').value)
-        Hmaths1 = [10,20,30,40,50,60,70,80,90]
-        Hmaths2 = []
+        if (document.getElementById("Higher").classList.contains("enabled")) {
+          var testHorF = "Higher";
+        }
+        else {
+          var testHorF = "Foundation"
+        }
+        if (document.getElementById('test1').classList.contains("enabled")) {
+          var test1or2 = "Test1"
+        }
+        else {
+          var test1or2 = "Test2"
+        }
+        console.log(testHorF)
+        var test = [anothertest]
+        var anothertest = [1,2,3,4,4,5,5]
+        console.log(test)
 
         
       }
@@ -63,7 +96,8 @@
       </div>
       <div class="sujectH">
           <select name="subject" id="subject" style="background-color: #81e6c4;">
-            <option value="Maths2">Maths</option>
+            <option value="Nothing">Press To Change Subject</option>
+            <option value="Maths">Maths</option>
             <option value="English Literature" onclick="var subject = 'maths';">English Literature</option>
             <option value="English Language">English Language</option>
             <option value="Physics">Physics</option>
