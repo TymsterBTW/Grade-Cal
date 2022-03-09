@@ -1,66 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="Style.css" />
-    <script>
-      color("Higher" , "Foundation")
-      function color(x, y){
-        var color = document.getElementById(x);
 
-        if (color.classList.contains("disabled")) {
-          color.classList.remove("disabled");
-          color.classList.add("enabled");
-          document.getElementById(y).classList.remove("enabled");
-          document.getElementById(y).classList.add("disabled");
-        }
-        else {
-          color.classList.remove("enabled");
-          color.classList.add("disabled");
-        }
-     }
-     function colorcal() {
-       var color = document.getElementById("calcu");
-       color.classList.remove("disabled");
-       color.classList.add("enabled");
-       setTimeout(() => { color.classList.remove("enabled"); color.classList.add("disabled"); }, 800);
-     }
-      function GradeCalculator(){
-        var Hmaths1 = [10,20,30,40,50,60,70,80,90]
-        var Hmaths2 = [10,30,50,60]
-        var Fmaths1 = []
-        var fmaths2 = []
-        var select = document.getElementById('subject');
-        var subject = select.options[select.selectedIndex].value;
-        console.log(subject)
-        if (document.getElementById("Higher").classList.contains("enabled")){
-          var subjetcHF = subject + "H"
-          if (document.getElementById("Test1").classList.contains("enabled")){
-            var subjectHF12 = subjetcHF + "1"
-          }
-          else
-            var subjectHF12 = subjetcHF+ "2"
-        }
-        else {
-          subjetcHF = subject + "F"
-          if (document.getElementById("Test1").classList.contains("enabled")){
-            var subjectHF12 = subjetcHF + "1"
-          }
-          else
-            var subjectHF12 = subjetcHF+ "2"
-        }
-        console.log(subjectHF12)
-        gradecal(subjectHF12)
-      }
-      function gradecal(subject){
-        var percentage = parseInt(document.getElementById('score').value)/parseInt(document.getElementById('total').value) * 100;
-        for (let i = 0; i < 9; i++) {
-                    if (percentage >= param[i]) {
-                        console.log(param[i])
-                        var answer = i + 1
-                        console.log("it is " + answer)
-                    }
-                }
-      }
-    </script>
     <body id="background">
       <div id="box">
         <div class="title"><b>Grade Calculator</b></div>
@@ -70,14 +11,12 @@
           placeholder="Input what you got"
           class="input"
           id="score"
-          style="border-right: 2px #47cca0 solid;"
         />
         <input
           type="text"
           placeholder="Input what it was out of"
           class="input"
           id="total"
-          style="border-left: 2px #47cca0 solid;"
         />
       </div>
       <div class="holding HF">
@@ -107,9 +46,81 @@
         <button type="button" class="buttonC disabled" id="calcu" onclick="colorcal(); GradeCalculator()">Calculate</button>
       </div>
       <div class="output">
-        <p id="Result">Your result is a Grade : <p id="something"></p></p>
+        <p id="Result">Your result is a Grade : <p id="result_text"></p></p>
       </div>
       
     </body>
+    <script>
+      color("Higher" , "Foundation")
+      
+      
+      const percentage_margins = {
+        /*maths*/
+        "MathsH1" : [10,20,30,40,50,60,70,80,90]
+        /*english language*/
+        /*english literature*/
+        /*Chemistry*/
+        /*Physics*/
+        /*Biology*/
+        /*computer science*/
+
+      }
+
+      function color(x, y){
+        var color = document.getElementById(x);
+
+        if (color.classList.contains("disabled")) {
+          color.classList.remove("disabled");
+          color.classList.add("enabled");
+          document.getElementById(y).classList.remove("enabled");
+          document.getElementById(y).classList.add("disabled");
+        }
+        else {
+          color.classList.remove("enabled");
+          color.classList.add("disabled");
+        }
+     }
+     function colorcal() {
+       var color = document.getElementById("calcu");
+       color.classList.remove("disabled");
+       color.classList.add("enabled");
+       setTimeout(() => { color.classList.remove("enabled"); color.classList.add("disabled"); }, 800);
+     }
+
+     
+      function GradeCalculator(){
+        var select = document.getElementById('subject');
+        var subject = select.options[select.selectedIndex].value;
+        if (document.getElementById("Higher").classList.contains("enabled")){
+          var subjetcHF = subject + "H"
+          if (document.getElementById("Test1").classList.contains("enabled")){
+            var subjectHF12 = subjetcHF + "1"
+          }
+          else
+            var subjectHF12 = subjetcHF+ "2"
+        }
+        else {
+          subjetcHF = subject + "F"
+          if (document.getElementById("Test1").classList.contains("enabled")){
+            var subjectHF12 = subjetcHF + "1"
+          }
+          else
+            var subjectHF12 = subjetcHF+ "2"
+        }
+        var subjectAfter = `${subjectHF12}`;
+        gradecal(subjectHF12)
+      }
+      function gradecal(subjectHF12){
+        const parameter = percentage_margins[subjectHF12]
+        const MathsH1 = [3.75, 7.5, 11.25, 17.5, 28.75, 40, 52.5, 68.75, 85];
+        var percentage = parseInt(document.getElementById('score').value) / parseInt(document.getElementById('total').value) * 100;
+        for (let i = 1; i < 10; i++) {
+          if (percentage >= parameter[i]) {
+          var answer = i
+                    }
+                }
+        document.getElementById("result_text").innerHTML = answer
+      }
+    </script>
   </head>
 </html>
