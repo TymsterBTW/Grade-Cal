@@ -23,23 +23,7 @@
        color.classList.add("enabled");
        setTimeout(() => { color.classList.remove("enabled"); color.classList.add("disabled"); }, 800);
      }
-      /*Main code for grade calclator*/
-      /*function calc(param) {
-                console.log("after func")
-                var percentage = document.getElementById("inputbox").value;
-                for (let i = 0; i < 9; i++) {
-                    if (percentage >= param[i]) {
-                        console.log(param[i])
-                        var answer = i + 1
-                        console.log("it is " + answer)
-                    }
-                }
-                document.getElementById("result").innerHTML = "Your result is a grade: " + answer
-            }        
-            stuff for later
-             */
       function GradeCalculator(){
-        var percentage = parseInt(document.getElementById('score').value)/parseInt(document.getElementById('total').value) * 100;
         var Hmaths1 = [10,20,30,40,50,60,70,80,90]
         var Hmaths2 = [10,30,50,60]
         var Fmaths1 = []
@@ -67,7 +51,14 @@
         gradecal(subjectHF12)
       }
       function gradecal(subject){
-        
+        var percentage = parseInt(document.getElementById('score').value)/parseInt(document.getElementById('total').value) * 100;
+        for (let i = 0; i < 9; i++) {
+                    if (percentage >= param[i]) {
+                        console.log(param[i])
+                        var answer = i + 1
+                        console.log("it is " + answer)
+                    }
+                }
       }
     </script>
     <body id="background">
