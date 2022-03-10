@@ -6,15 +6,35 @@
   background-size: cover;
   height: 100%;
 }
+.header {
+  background-color: #3ff597;
+  margin: -10px;
+  width: 110%;
+  height: 12%;
+  padding: 10px;
+}
+.header_text {
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: -10px;
+  background-color: b2ffd6;
+  width: 20%;
+  font-size: 30px;
+  height: 90%;
+  padding: 10px;
+  border-radius: 10px;
+}
+.header_text:hover {
+  background-color: #7bf7b9;
+}
 #box {
-  border-color: d7fdf0;
-  border-width: 8px;
-  border-style: solid;
+  border: none;
   margin: auto;
   width: 60%;
   height: 80%;
   border-radius: 100px;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 .topbit {
   background-color: grey;
@@ -37,7 +57,6 @@
   font-size: 60px;
   padding: 10px;
   background-color: #b2ffd6;
-  text-shadow: 2px 2px white;
 }
 .inputs {
   width: 40%;
@@ -60,9 +79,6 @@
   background-color: transparent;
   border: 2px #47cca0 solid;
   text-align: left;
-}
-.input:focus + ::placeholder {
-  transform: translateY(-70%);
 }
 .input:focus {
   width: 55%;
@@ -110,11 +126,10 @@
   margin-top: 8px;
 }
 .button:hover {
-  background-color: transparent;
-  border: 3px black solid;
+  opacity: 10;
 
-  box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.1),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.1),
+    0 20px 50px 0 rgba(0, 0, 0, 0.19);
 }
 .button:visited {
   color: red;
@@ -144,7 +159,7 @@
 #subject {
   padding: 10px;
   font-size: 13px;
-  margin-left: 42%;
+  margin-left: 40%;
   text-align: left;
   width: auto;
   height: 42px;

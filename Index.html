@@ -3,18 +3,21 @@
     <link rel="stylesheet" href="Style.css" />
 
     <body id="background">
+      <div class="header">
+        <button class="header_text" onclick="location.href = 'https://www.youtube.com'">The School Website</button>
+      </div>
       <div id="box">
         <div class="title"><b>Grade Calculator</b></div>
         <div class="inputs">
           <input
           type="text"
-          placeholder="Input what you got"
+          placeholder="Input your score"
           class="input"
           id="score"
         />
         <input
           type="text"
-          placeholder="Input what it was out of"
+          placeholder="Input Total"
           class="input"
           id="total"
         />
@@ -56,9 +59,20 @@
       
       const percentage_margins = {
         /*maths*/
-        "MathsH1" : [10,20,30,40,50,60,70,80,90]
+        "MathsH1" : [10,20,30,40,50,60,70,80,90],
+        "MathH2" : [10,30,40,50,60,70,80,90,95],
+        "MathF1" : [],
+        "MathF2" : [],
         /*english language*/
+        "English LanguageH1" : [],
+        "English LanguageH2" : [],
+        "English LanguageF1" : [],
+        "English LanguageF2" : [],
         /*english literature*/
+        "English LiteratureH1" : [],
+        "English LiteratureH2" : [],
+        "English LiteratureF1" : [],
+        "English LiteratureF2" : [],
         /*Chemistry*/
         /*Physics*/
         /*Biology*/
@@ -115,8 +129,11 @@
         const MathsH1 = [3.75, 7.5, 11.25, 17.5, 28.75, 40, 52.5, 68.75, 85];
         var percentage = parseInt(document.getElementById('score').value) / parseInt(document.getElementById('total').value) * 100;
         for (let i = 1; i < 10; i++) {
-          if (percentage >= parameter[i]) {
-          var answer = i
+          if (percentage < parameter[0]) {
+            answer  = 1
+        }
+          else if (percentage >= parameter[i]) {
+          var answer = i + 1
                     }
                 }
         document.getElementById("result_text").innerHTML = answer
