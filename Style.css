@@ -1,5 +1,5 @@
 #background {
-  font-family: monospace;
+  font-family: "Times New Roman", Times, serif;
   background-color: b2ffd6;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,9 +9,17 @@
 .header {
   background-color: #3ff597;
   margin: -10px;
-  width: 110%;
-  height: 12%;
+  width: 100%;
+  height: 10%;
   padding: 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+.disclaimer_container {
+  margin-top: 11%;
+  width: 40%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .header_text {
   margin-top: 10px;
@@ -19,7 +27,7 @@
   border: none;
   margin-bottom: -10px;
   background-color: b2ffd6;
-  width: 20%;
+  width: auto;
   font-size: 30px;
   height: 90%;
   padding: 10px;
@@ -34,7 +42,7 @@
   width: 60%;
   height: 80%;
   border-radius: 100px;
-  margin-top: 2%;
+  margin-top: 1%;
 }
 .topbit {
   background-color: grey;
@@ -62,7 +70,7 @@
   width: 40%;
   padding: 10px;
   background-color: #b2ffd6;
-  margin-top: 4%;
+  margin-top: -8%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -174,7 +182,7 @@
   box-shadow: 3px 3px 3px 3px #81e6c4;
 }
 .output {
-  margin-top: 3%;
+  margin-top: 2%;
   background-color: #81e6c4;
   border-radius: 5px;
   border: 3px #47cca0 solid;
@@ -182,7 +190,7 @@
   width: 40%;
   margin-left: auto;
   margin-right: auto;
-  height: 10%;
+  height: 12%;
   box-shadow: 3px 3px 3px 3px #81e6c4;
 }
 .calc {
