@@ -34,9 +34,11 @@
   height: 90%;
   padding: 10px;
   border-radius: 10px;
+  transition: 0.4s ease-in-out;
 }
 .header_text:hover {
   background-color: #0a60bd;
+  transform: translateY(-10%);
 }
 #box {
   border: none;
@@ -124,7 +126,8 @@
 
 .enabled {
   border: none;
-  box-shadow: 0 12px 16px 0 #0e9485;
+  box-shadow: 0px -5px 10px#0e9485, 0px 5px 10px #0e9485, 5px 0px 10px #0e9485,
+    -5px 0px 10px #0e9485;
 }
 
 .holding {
@@ -136,16 +139,13 @@
 }
 .button:hover {
   opacity: 10;
-
-  box-shadow: 0 12px 16px 0 #0e9485;
+  box-shadow: 0px -5px 10px#0e9485, 0px 5px 10px #0e9485, 5px 0px 10px #0e9485,
+    -5px 0px 10px #0e9485;
+  transform: translateY(-20%);
 }
 .button:hover + .hide {
   display: block;
   color: red;
-}
-.button:visited {
-  color: red;
-  border: 6px black solid;
 }
 .button {
   height: 100%;
@@ -157,6 +157,7 @@
   transition: 0.2s ease-in-out;
   text-align: center;
   cursor: pointer;
+  transition: 0.6 ease-in-out;
 }
 #HIGHER {
   margin-left: 0px;
@@ -182,10 +183,12 @@
   outline: none;
   cursor: pointer;
   display: inline-block;
+  transition: 0.5s ease-in-out;
 }
-.below4 {
-}
-.above4 {
+#subject:hover {
+  transform: translateY(-10%);
+  box-shadow: 0px -5px 10px#0e9485, 0px 5px 10px #0e9485, 5px 0px 10px #0e9485,
+    -5px 0px 10px #0e9485;
 }
 .output {
   margin-top: 2%;
@@ -220,7 +223,10 @@
   text-align: center;
   cursor: pointer;
   border: 3px #47cca0 solid;
+  transition: 0.5s ease-in-out;
 }
 .buttonC:hover {
-  box-shadow: 0 12px 16px 0 #0e9485;
+  transform: translateY(-10%);
+  box-shadow: 0px -5px 10px#0e9485, 0px 5px 10px #0e9485, 5px 0px 10px #0e9485,
+    -5px 0px 10px #0e9485;
 }
