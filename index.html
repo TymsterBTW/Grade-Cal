@@ -13,19 +13,19 @@
       <div id="box">
         <div class="title"><b>Grade Calculator</b></div>
         <div class="disclaimer_container">
-          <p class="disclaimer_text">The data for the grade calculator are from the GCSE AQA 2019 GCSE grade boundaries
+          <p class="disclaimer_text">The data for the grade calculator are from the Official GCSE AQA 2019 GCSE grade boundaries
             and the websites linked above are not created by us.
           </p>
         </div>
         <div class="inputs">
           <input
-          type="text"
+          type="number"
           placeholder="Input your score"
           class="input"
           id="score"
         />
         <input
-          type="text"
+          type="number"
           placeholder="Input Total"
           class="input"
           id="total"
@@ -55,23 +55,22 @@
 
       </div>
       <div class="calc">
-        <button type="button" class="buttonC disabled" id="calcu" onclick="colorcal(); GradeCalculator()">Calculate</button>
+        <button type="button" class="buttonC disabled" id="calcu" onclick="colorcal(); checks()">Calculate</button>
+        <p class="hide" id="error">Please Input all <abbr title="You are missing one of the necessary inputs for the calculator to work">fields</abbr></p>
       </div>
       <div class="output">
         <p id="Result" class="result_text"">Your result is a Grade : <label id="result_text"></label></p>
       </div>
-      
     </body>
     <script>
-      color("Higher" , "Foundation")
       
       
       const percentage_margins = {
         /*maths*/
         "MathsH1" : [3.75,7.5,11.25,17.5,28.75,40,52.5,68.75,85],
-        "MathH2" : [3.75,7.5,11.25,17.5,30,43.75,57.5,71.25,86.25],
-        "MathF1" : [10,20,31,42,53],
-        "MathF2" : [8.75,21.25,33.75,47.5,62.5],
+        "MathsH2" : [3.75,7.5,11.25,17.5,30,43.75,57.5,71.25,86.25],
+        "MathsF1" : [10,20,31,42,53,53,53,53,53],
+        "MathsF2" : [8.75,21.25,33.75,47.5,62.5,62.5,62.5,62.5,62.5],
         /*english language*/
         "English LanguageH1" : [10,22.5,35,47.5,53.75,60,67.5,73.75,80],
         "English LanguageH2" : [10,22.5,35,47.5,53.75,60,67.5,73.75,80],
@@ -79,18 +78,18 @@
         "English LiteratureH1" : [10.9,21.8,32.8,43.75,51.2,60.9,70.3,78.1,87.5],
         "English LiteratureH2" : [9.3,19.7,30.2,41.6,51,60.4,70,79.16,88.5],
         /*Chemistry*/
-        "ChemistryF1" : [10,25,40,66,65],
-        "ChemistryF2" : [11,27,43,59,68],
+        "ChemistryF1" : [10,25,40,66,65,65,65,65,65],
+        "ChemistryF2" : [11,27,43,59,68,68,68,68,68],
         "ChemistryH1" : [8,16,20,25,34,43,52,61,71],
         "ChemistryH2" : [8,16,20,25,35,45,55,64,73],
         /*Physics*/
-        "PhysicsF1" : [10,26,42,59,67],
-        "PhysicsF2" : [10,24,38,52,62],
+        "PhysicsF1" : [10,26,42,59,67,67,67,67,67],
+        "PhysicsF2" : [10,24,38,52,62,62,62,62,62],
         "PhysicsH1" : [11,17,24,29,39,50,61,68,76],
         "PhysicsH2" : [7,13,18,22,30,38,47,57,67],
         /*Biology*/
-        "BiologyF1" : [10,27,44,62,69],
-        "BiologyF2" : [11,24,38,52,61],
+        "BiologyF1" : [10,27,44,62,69,69,69,69,69],
+        "BiologyF2" : [11,24,38,52,61,61,61,61,61],
         "BiologyH1" : [8,21,28,32,40,48,57,63,69],
         "BiologyH2" : [6,13,18,23,32,41,50,57,65],
         /*computer science*/
@@ -101,7 +100,6 @@
 
       function color(x, y){
         var color = document.getElementById(x);
-
         if (color.classList.contains("disabled")) {
           color.classList.remove("disabled");
           color.classList.add("enabled");
@@ -141,10 +139,10 @@
             var subjectHF12 = subjetcHF+ "2"
         }
         var subjectAfter = `${subjectHF12}`;
-        gradecal(subjectHF12)
+        gradecal(subjectAfter)
       }
       function gradecal(subjectHF12){
-        const parameter = percentage_margins[subjectHF12]
+        var parameter = percentage_margins[subjectHF12]
         var percentage = parseInt(document.getElementById('score').value) / parseInt(document.getElementById('total').value) * 100;
         for (let i = 1; i < 10; i++) {
           if (percentage < parameter[0]) {
@@ -155,9 +153,26 @@
                     }
                 }
         document.getElementById("result_text").innerHTML = answer
-      function disable(subject){
-        
       }
+      function checks(){
+        var error = document.getElementById('error')
+        const higher = document.getElementById('Higher')
+        const foundation = document.getElementById('Foundation')
+        const test1 = document.getElementById('Test1')
+        const Test2 = document.getElementById('Test2')
+        const input2 = document.getElementById('total').value
+        const input1 = document.getElementById('score').value
+        const form = document.getElementById('subject')
+        console.log(input1 == "");
+        if ((higher.classList.contains("enabled")|| foundation.classList.contains("enabled")) && (test1.classList.contains("enabled")|| Test2.classList.contains("enabled")) &&  (form.options[form.selectedIndex].value != "Nothing") && (input1 !== "" && input2 !== "") && Number.isInteger(input1) || Number.isInteger(input2) && input1 < input2){
+          error.classList.remove("error")
+          error.classList.add("hide")
+          GradeCalculator()
+        }
+        else {
+          error.classList.remove("hide")
+          error.classList.add("error")
+        }
       }
     </script>
   </head>
