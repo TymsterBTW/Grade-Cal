@@ -4,7 +4,7 @@
 
     <body id="background">
       <div class="header">
-        <button class="header_text" onclick="location.href = 'https://www.youtube.com'">The Usefull School Tools</button>
+        <button class="header_text" onclick="location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">The Usefull School Tools</button>
         <button class="header_text" onclick="location.href = 'https://www.desmos.com/calculator'">Grahing Calculator</button>
         <button class="header_text" onclick="location.href = 'https://mathsolver.microsoft.com/en/algebra-calculator'">Algerbraic Calculator</button>
       </div>
@@ -12,7 +12,7 @@
         <div class="title"><b>Grade Calculator</b></div>
         <div class="disclaimer_container">
           <p class="disclaimer_text">The data for the grade calculator are from the GCSE AQA 2019 GCSE grade boundaries
-            and the websites above are not created by me.
+            and the websites linked above are not created by us.
           </p>
         </div>
         <div class="inputs">
@@ -42,7 +42,7 @@
           <select name="subject" id="subject" style="background-color: #81e6c4;">
             <option value="Nothing">Press To Change Subject</option>
             <option value="Maths">Maths</option>
-            <option value="English Literature" onclick="var subject = 'maths';">English Literature</option>
+            <option value="English Literature">English Literature</option>
             <option value="English Language">English Language</option>
             <option value="Physics">Physics</option>
             <option value="Biology">Biology</option>
@@ -66,24 +66,34 @@
       
       const percentage_margins = {
         /*maths*/
-        "MathsH1" : [10,20,30,40,50,60,70,80,90],
-        "MathH2" : [10,30,40,50,60,70,80,90,95],
-        "MathF1" : [],
-        "MathF2" : [],
+        "MathsH1" : [3.75,7.5,11.25,17.5,28.75,40,52.5,68.75,85],
+        "MathH2" : [3.75,7.5,11.25,17.5,30,43.75,57.5,71.25,86.25],
+        "MathF1" : [10,20,31,42,53],
+        "MathF2" : [8.75,21.25,33.75,47.5,62.5],
         /*english language*/
-        "English LanguageH1" : [],
-        "English LanguageH2" : [],
-        "English LanguageF1" : [],
-        "English LanguageF2" : [],
+        "English LanguageH1" : [10,22.5,35,47.5,53.75,60,67.5,73.75,80],
+        "English LanguageH2" : [10,22.5,35,47.5,53.75,60,67.5,73.75,80],
         /*english literature*/
-        "English LiteratureH1" : [],
-        "English LiteratureH2" : [],
-        "English LiteratureF1" : [],
-        "English LiteratureF2" : [],
+        "English LiteratureH1" : [10.9,21.8,32.8,43.75,51.2,60.9,70.3,78.1,87.5],
+        "English LiteratureH2" : [9.3,19.7,30.2,41.6,51,60.4,70,79.16,88.5],
         /*Chemistry*/
+        "ChemistryF1" : [10,25,40,66,65],
+        "ChemistryF2" : [11,27,43,59,68],
+        "ChemistryH1" : [8,16,20,25,34,43,52,61,71],
+        "ChemistryH2" : [8,16,20,25,35,45,55,64,73],
         /*Physics*/
+        "PhysicsF1" : [10,26,42,59,67],
+        "PhysicsF2" : [10,24,38,52,62],
+        "PhysicsH1" : [11,17,24,29,39,50,61,68,76],
+        "PhysicsH2" : [7,13,18,22,30,38,47,57,67],
         /*Biology*/
+        "BiologyF1" : [10,27,44,62,69],
+        "BiologyF2" : [11,24,38,52,61],
+        "BiologyH1" : [8,21,28,32,40,48,57,63,69],
+        "BiologyH2" : [6,13,18,23,32,41,50,57,65],
         /*computer science*/
+        "Computer ScienceH1" : [10, 21.25,32.5,43.75,53.75,63.75,73.75,80,87.5],
+        "Computer ScienceH2" : [11.25,22.5,33.75,46.25,53.75,61.25,68.75,76.25,85],
 
       }
 
@@ -133,7 +143,6 @@
       }
       function gradecal(subjectHF12){
         const parameter = percentage_margins[subjectHF12]
-        const MathsH1 = [3.75, 7.5, 11.25, 17.5, 28.75, 40, 52.5, 68.75, 85];
         var percentage = parseInt(document.getElementById('score').value) / parseInt(document.getElementById('total').value) * 100;
         for (let i = 1; i < 10; i++) {
           if (percentage < parameter[0]) {
