@@ -1,13 +1,13 @@
 #background {
   font-family: "Times New Roman", Times, serif;
-  background-color: b2ffd6;
+  background-color: #75ffef;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
 }
 .header {
-  background-color: #3ff597;
+  background-color: #60bee0;
   margin: -10px;
   width: 100%;
   height: 10%;
@@ -15,7 +15,7 @@
   font-family: "Times New Roman", Times, serif;
 }
 .disclaimer_container {
-  margin-top: 11%;
+  margin-top: 12%;
   width: 40%;
   text-align: center;
   margin-left: auto;
@@ -26,7 +26,7 @@
   cursor: pointer;
   border: none;
   margin-bottom: -10px;
-  background-color: b2ffd6;
+  background-color: #75ffef;
   width: auto;
   font-size: 30px;
   height: 90%;
@@ -34,7 +34,7 @@
   border-radius: 10px;
 }
 .header_text:hover {
-  background-color: #7bf7b9;
+  background-color: #907dff;
 }
 #box {
   border: none;
@@ -55,21 +55,15 @@
 }
 .title {
   color: black;
-  border-color: #b2ffd6;
-  border-width: 4px;
-  border-style: solid;
   width: 40%;
   margin: auto;
   text-align: center;
   height: 5%;
   font-size: 60px;
-  padding: 10px;
-  background-color: #b2ffd6;
 }
 .inputs {
   width: 40%;
   padding: 10px;
-  background-color: #b2ffd6;
   margin-top: -8%;
   text-align: center;
   margin-left: auto;
@@ -85,13 +79,12 @@
   outline: none;
   transition: width 0.4s ease;
   background-color: transparent;
-  border: 2px #47cca0 solid;
+  border: 2px #60bee0 solid;
   text-align: left;
 }
 .input:focus {
   width: 55%;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 #0e9485;
 }
 .input:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.1),
@@ -117,13 +110,14 @@
 }
 
 .disabled {
-  background-color: #81e6c4;
+  border: transparent;
 }
 
 .enabled {
-  background-color: #12a358;
-  color: white;
-  box-shadow: 0 0 4px 4px #81e6c4;
+  box-shadow: 0 8px 10px 0 #907dff;
+  border-color: #907dff;
+  border-width: 4px;
+  border-style: solid;
 }
 
 .holding {
@@ -136,8 +130,7 @@
 .button:hover {
   opacity: 10;
 
-  box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.1),
-    0 20px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 10px 0 #907dff;
 }
 .button:visited {
   color: red;
@@ -146,14 +139,13 @@
 .button {
   height: 100%;
   width: 35%;
-  border: none;
   position: relative;
   z-index: 100px;
+  background-color: #60bee0;
   border-radius: 8px;
   transition: 0.2s ease-in-out;
   text-align: center;
   cursor: pointer;
-  border: 3px #47cca0 solid;
 }
 #HIGHER {
   margin-left: 0px;
@@ -165,6 +157,7 @@
   margin-left: 27.7%;
 }
 #subject {
+  background-color: #60bee0;
   padding: 10px;
   font-size: 13px;
   margin-left: 40%;
@@ -178,20 +171,21 @@
   outline: none;
   cursor: pointer;
   display: inline-block;
-  border: 3px #47cca0 solid;
-  box-shadow: 3px 3px 3px 3px #81e6c4;
+  box-shadow: 3px 3px 3px 3px #907dff;
 }
 .output {
   margin-top: 2%;
-  background-color: #81e6c4;
+  background-color: #60bee0;
   border-radius: 5px;
-  border: 3px #47cca0 solid;
-  text-align: center;
+  padding: 10px;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
   height: 12%;
-  box-shadow: 3px 3px 3px 3px #81e6c4;
+  box-shadow: 3px 3px 3px 3px #907dff;
+}
+#result {
+  margin-left: 90px;
 }
 .calc {
   margin-top: 2%;
@@ -205,6 +199,7 @@
   height: 100%;
   width: 35%;
   border: none;
+  background-color: #60bee0;
   position: relative;
   z-index: 100px;
   border-radius: 8px;
@@ -212,12 +207,7 @@
   text-align: center;
   cursor: pointer;
   border: 3px #47cca0 solid;
-  box-shadow: 3px 3px 3px 3px #81e6c4;
 }
 .buttonC:hover {
-  background-color: transparent;
-  border: 3px black solid;
-
-  box-shadow: 0 12px 10px 0 rgba(0, 0, 0, 0.1),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 10px 0 #907dff;
 }

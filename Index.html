@@ -1,12 +1,14 @@
 <html>
   <head>
+    <meta name="description" content="The Usefull School Tools">
+    <meta name="keywords" >  
     <link rel="stylesheet" href="Style.css" />
 
     <body id="background">
       <div class="header">
-        <button class="header_text" onclick="location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">The Usefull School Tools</button>
-        <button class="header_text" onclick="location.href = 'https://www.desmos.com/calculator'">Grahing Calculator</button>
-        <button class="header_text" onclick="location.href = 'https://mathsolver.microsoft.com/en/algebra-calculator'">Algerbraic Calculator</button>
+        <button class="header_text" onclick="location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">The Useful School Tools</button>
+        <button class="header_text" onclick="location.href = 'https://www.desmos.com/calculator'">Graphing Calculator</button>
+        <button class="header_text" onclick="location.href = 'https://mathsolver.microsoft.com/en/algebra-calculator'">Algebraic Calculator</button>
       </div>
       <div id="box">
         <div class="title"><b>Grade Calculator</b></div>
@@ -39,7 +41,7 @@
 
       </div>
       <div class="sujectH">
-          <select name="subject" id="subject" style="background-color: #81e6c4;">
+          <select name="subject" id="subject" class="subject">
             <option value="Nothing">Press To Change Subject</option>
             <option value="Maths">Maths</option>
             <option value="English Literature">English Literature</option>
@@ -56,7 +58,7 @@
         <button type="button" class="buttonC disabled" id="calcu" onclick="colorcal(); GradeCalculator()">Calculate</button>
       </div>
       <div class="output">
-        <p id="Result">Your result is a Grade : <p id="result_text"></p></p>
+        <p id="Result" class="result_text"">Your result is a Grade : <label id="result_text"></label></p>
       </div>
       
     </body>
