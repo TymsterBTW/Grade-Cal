@@ -1,1 +1,164 @@
-fdgdsgds
+<html>
+  <head>
+    <meta name="description" content="The Usefull School Tools">
+    <meta name="keywords" >  
+    <link rel="stylesheet" href="Style.css" />
+
+    <body id="background">
+      <div class="header">
+        <button class="header_text" onclick="location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">The Useful School Tools</button>
+        <button class="header_text" onclick="location.href = 'https://www.desmos.com/calculator'" style="margin-left: 5px;">Graphing Calculator</button>
+        <button class="header_text" onclick="location.href = 'https://mathsolver.microsoft.com/en/algebra-calculator'" style="margin-left: 5;">Algebraic Calculator</button>
+      </div>
+      <div id="box">
+        <div class="title"><b>Grade Calculator</b></div>
+        <div class="disclaimer_container">
+          <p class="disclaimer_text">The data for the grade calculator are from the GCSE AQA 2019 GCSE grade boundaries
+            and the websites linked above are not created by us.
+          </p>
+        </div>
+        <div class="inputs">
+          <input
+          type="text"
+          placeholder="Input your score"
+          class="input"
+          id="score"
+        />
+        <input
+          type="text"
+          placeholder="Input Total"
+          class="input"
+          id="total"
+        />
+      </div>
+      <div class="holding HF">
+        <button type="button" class="button disabled" id="Higher" onclick=" var x = 'Higher'; var y = 'Foundation'; color(x , y);">Higher</button>
+        <button class="button disabled" id="Foundation" type="button" onclick=" var x = 'Foundation'; var y = 'Higher'; color(x , y);">Foundation</button>
+      </div>
+      <div class="Holding Test">
+        <button type="button" class="button disabled" id="Test1" onclick=" var x = 'Test1'; var y = 'Test2'; color(x , y)">Test 1</button>
+        <button type="button" class="button disabled" id="Test2" onclick="var x = 'Test2'; var y = 'Test1'; color(x , y)">Test 2</button>
+
+      </div>
+      <div class="sujectH">
+          <select name="subject" id="subject" class="subject">
+            <option value="Nothing">Press To Change Subject</option>
+            <option value="Maths">Maths</option>
+            <option value="English Literature" onclick="disable()">English Literature</option>
+            <option value="English Language" onclick="disable()">English Language</option>
+            <option value="Physics">Physics</option>
+            <option value="Biology">Biology</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Computer Science">Computer Science</option>
+          </select>
+        </form>
+
+      </div>
+      <div class="calc">
+        <button type="button" class="buttonC disabled" id="calcu" onclick="colorcal(); GradeCalculator()">Calculate</button>
+      </div>
+      <div class="output">
+        <p id="Result" class="result_text"">Your result is a Grade : <label id="result_text"></label></p>
+      </div>
+      
+    </body>
+    <script>
+      color("Higher" , "Foundation")
+      
+      
+      const percentage_margins = {
+        /*maths*/
+        "MathsH1" : [3.75,7.5,11.25,17.5,28.75,40,52.5,68.75,85],
+        "MathH2" : [3.75,7.5,11.25,17.5,30,43.75,57.5,71.25,86.25],
+        "MathF1" : [10,20,31,42,53],
+        "MathF2" : [8.75,21.25,33.75,47.5,62.5],
+        /*english language*/
+        "English LanguageH1" : [10,22.5,35,47.5,53.75,60,67.5,73.75,80],
+        "English LanguageH2" : [10,22.5,35,47.5,53.75,60,67.5,73.75,80],
+        /*english literature*/
+        "English LiteratureH1" : [10.9,21.8,32.8,43.75,51.2,60.9,70.3,78.1,87.5],
+        "English LiteratureH2" : [9.3,19.7,30.2,41.6,51,60.4,70,79.16,88.5],
+        /*Chemistry*/
+        "ChemistryF1" : [10,25,40,66,65],
+        "ChemistryF2" : [11,27,43,59,68],
+        "ChemistryH1" : [8,16,20,25,34,43,52,61,71],
+        "ChemistryH2" : [8,16,20,25,35,45,55,64,73],
+        /*Physics*/
+        "PhysicsF1" : [10,26,42,59,67],
+        "PhysicsF2" : [10,24,38,52,62],
+        "PhysicsH1" : [11,17,24,29,39,50,61,68,76],
+        "PhysicsH2" : [7,13,18,22,30,38,47,57,67],
+        /*Biology*/
+        "BiologyF1" : [10,27,44,62,69],
+        "BiologyF2" : [11,24,38,52,61],
+        "BiologyH1" : [8,21,28,32,40,48,57,63,69],
+        "BiologyH2" : [6,13,18,23,32,41,50,57,65],
+        /*computer science*/
+        "Computer ScienceH1" : [10, 21.25,32.5,43.75,53.75,63.75,73.75,80,87.5],
+        "Computer ScienceH2" : [11.25,22.5,33.75,46.25,53.75,61.25,68.75,76.25,85],
+
+      }
+
+      function color(x, y){
+        var color = document.getElementById(x);
+
+        if (color.classList.contains("disabled")) {
+          color.classList.remove("disabled");
+          color.classList.add("enabled");
+          document.getElementById(y).classList.remove("enabled");
+          document.getElementById(y).classList.add("disabled");
+        }
+        else {
+          color.classList.remove("enabled");
+          color.classList.add("disabled");
+        }
+     }
+     function colorcal() {
+       var color = document.getElementById("calcu");
+       color.classList.remove("disabled");
+       color.classList.add("enabled");
+       setTimeout(() => { color.classList.remove("enabled"); color.classList.add("disabled"); }, 800);
+     }
+
+     
+      function GradeCalculator(){
+        var select = document.getElementById('subject');
+        var subject = select.options[select.selectedIndex].value;
+        if (document.getElementById("Higher").classList.contains("enabled")){
+          var subjetcHF = subject + "H"
+          if (document.getElementById("Test1").classList.contains("enabled")){
+            var subjectHF12 = subjetcHF + "1"
+          }
+          else
+            var subjectHF12 = subjetcHF+ "2"
+        }
+        else {
+          subjetcHF = subject + "F"
+          if (document.getElementById("Test1").classList.contains("enabled")){
+            var subjectHF12 = subjetcHF + "1"
+          }
+          else
+            var subjectHF12 = subjetcHF+ "2"
+        }
+        var subjectAfter = `${subjectHF12}`;
+        gradecal(subjectHF12)
+      }
+      function gradecal(subjectHF12){
+        const parameter = percentage_margins[subjectHF12]
+        var percentage = parseInt(document.getElementById('score').value) / parseInt(document.getElementById('total').value) * 100;
+        for (let i = 1; i < 10; i++) {
+          if (percentage < parameter[0]) {
+            answer  = 1
+        }
+          else if (percentage >= parameter[i]) {
+          var answer = i + 1
+                    }
+                }
+        document.getElementById("result_text").innerHTML = answer
+      function disable(subject){
+        
+      }
+      }
+    </script>
+  </head>
+</html>
