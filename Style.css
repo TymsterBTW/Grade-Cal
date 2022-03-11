@@ -69,6 +69,12 @@
   margin-left: auto;
   margin-right: auto;
 }
+.disabled {
+  border-color: red;
+}
+.hide {
+  display: none;
+}
 .input {
   width: 42%;
   height: 5%;
@@ -114,7 +120,6 @@
 }
 
 .enabled {
-  box-shadow: 0 8px 10px 0 #907dff;
   border-color: #907dff;
   border-width: 4px;
   border-style: solid;
@@ -131,6 +136,10 @@
   opacity: 10;
 
   box-shadow: 0 8px 10px 0 #907dff;
+}
+.button:hover + .hide {
+  display: block;
+  color: red;
 }
 .button:visited {
   color: red;

@@ -34,6 +34,7 @@
       <div class="holding HF">
         <button type="button" class="button disabled" id="Higher" onclick=" var x = 'Higher'; var y = 'Foundation'; color(x , y);">Higher</button>
         <button class="button disabled" id="Foundation" type="button" onclick=" var x = 'Foundation'; var y = 'Higher'; color(x , y);">Foundation</button>
+        <div class="hide">Error</div>
       </div>
       <div class="Holding Test">
         <button type="button" class="button disabled" id="Test1" onclick=" var x = 'Test1'; var y = 'Test2'; color(x , y)">Test 1</button>
@@ -44,8 +45,8 @@
           <select name="subject" id="subject" class="subject">
             <option value="Nothing">Press To Change Subject</option>
             <option value="Maths">Maths</option>
-            <option value="English Literature">English Literature</option>
-            <option value="English Language">English Language</option>
+            <option value="English Literature" onclick="disable()">English Literature</option>
+            <option value="English Language" onclick="disable()">English Language</option>
             <option value="Physics">Physics</option>
             <option value="Biology">Biology</option>
             <option value="Chemistry">Chemistry</option>
@@ -155,6 +156,10 @@
                     }
                 }
         document.getElementById("result_text").innerHTML = answer
+      function disable(subject){
+        Style
+        
+      }
       }
     </script>
   </head>
