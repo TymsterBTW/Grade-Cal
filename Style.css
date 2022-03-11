@@ -1,15 +1,16 @@
 #background {
   font-family: "Times New Roman", Times, serif;
-  background-color: #75ffef;
+  background-color: #0a60bd;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
 }
 .header {
-  background-color: #60bee0;
+  background-color: #7d98bd;
   margin: -10px;
-  width: 100%;
+  width: 70%;
+  border-radius: 10px;
   height: 10%;
   padding: 10px;
   font-family: "Times New Roman", Times, serif;
@@ -22,11 +23,12 @@
   margin-right: auto;
 }
 .header_text {
+  color: black;
   margin-top: 10px;
   cursor: pointer;
   border: none;
   margin-bottom: -10px;
-  background-color: #75ffef;
+  background-color: #7d98bd;
   width: auto;
   font-size: 30px;
   height: 90%;
@@ -34,7 +36,7 @@
   border-radius: 10px;
 }
 .header_text:hover {
-  background-color: #907dff;
+  background-color: #0a60bd;
 }
 #box {
   border: none;
@@ -76,6 +78,7 @@
   display: none;
 }
 .input {
+  color: black;
   width: 42%;
   height: 5%;
   border-radius: 7px;
@@ -85,7 +88,8 @@
   outline: none;
   transition: width 0.4s ease;
   background-color: transparent;
-  border: 2px #60bee0 solid;
+  border: none;
+  border-bottom: 2px #60bee0 solid;
   text-align: left;
 }
 .input:focus {
@@ -93,8 +97,7 @@
   box-shadow: 0 12px 16px 0 #0e9485;
 }
 .input:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.1),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 #0e9485;
 }
 .testcont {
   width: 40%;
@@ -120,9 +123,8 @@
 }
 
 .enabled {
-  border-color: #907dff;
-  border-width: 4px;
-  border-style: solid;
+  border: none;
+  box-shadow: 0 12px 16px 0 #0e9485;
 }
 
 .holding {
@@ -135,7 +137,7 @@
 .button:hover {
   opacity: 10;
 
-  box-shadow: 0 8px 10px 0 #907dff;
+  box-shadow: 0 12px 16px 0 #0e9485;
 }
 .button:hover + .hide {
   display: block;
@@ -180,7 +182,10 @@
   outline: none;
   cursor: pointer;
   display: inline-block;
-  box-shadow: 3px 3px 3px 3px #907dff;
+}
+.below4 {
+}
+.above4 {
 }
 .output {
   margin-top: 2%;
@@ -191,7 +196,6 @@
   margin-left: auto;
   margin-right: auto;
   height: 12%;
-  box-shadow: 3px 3px 3px 3px #907dff;
 }
 #result {
   margin-left: 90px;
@@ -218,5 +222,5 @@
   border: 3px #47cca0 solid;
 }
 .buttonC:hover {
-  box-shadow: 0 8px 10px 0 #907dff;
+  box-shadow: 0 12px 16px 0 #0e9485;
 }
