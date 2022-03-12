@@ -163,17 +163,33 @@
         const input2 = document.getElementById('total').value
         const input1 = document.getElementById('score').value
         const form = document.getElementById('subject')
-        console.log(input1 == "");
-        if ((higher.classList.contains("enabled")|| foundation.classList.contains("enabled")) && (test1.classList.contains("enabled")|| Test2.classList.contains("enabled")) &&  (form.options[form.selectedIndex].value != "Nothing") && (input1 !== "" && input2 !== "") && Number.isInteger(input1) || Number.isInteger(input2) && input1 < input2){
-          error.classList.remove("error")
+
+        console.log(input1 !== "");
+        if (classchecking(higher,foundation)&& classchecking(test1,Test2)&& form.options[form.selectedIndex].value != "Nothing" && inputchecking(input1) || inputchecking(input2) && input1 < input2){
           error.classList.add("hide")
+          error.classList.remove("remove")
           GradeCalculator()
         }
         else {
-          error.classList.remove("hide")
           error.classList.add("error")
+          error.classList.remove("hide")
         }
       }
+      function classchecking(input1,input2){
+      if (input1.classList.contains("enabled")  || (input2.classList.contains("enabled")) ){
+        return true
+      }
+      function inputchecking(input){
+        if (input1 !== "" && Number.isInteger(input1)){
+          return true
+        }
+        else {
+          return false
+        }
+
+
+      }
+    }
     </script>
   </head>
 </html>
