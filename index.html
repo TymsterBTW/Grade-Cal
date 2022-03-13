@@ -171,32 +171,16 @@
         classchecks(Test1,Test2)
         inputcheck(input1,input2)
         formcheck(form)
-        var buttons = false
-        var inputs = false
-        var formchecks = false
-        if (classchecks(higher,foundation){
-          buttons = true
+        var higher_foundation = classchecks(higher,foundation)
+        var Test1_test2 = classchecks(Test1,Test2)
+        var input1_input2 = inputcheck(input1,input2)
+        var form_check = formcheck(form)
+        console.log(higher_foundation,Test1_test2,input1_input2,form_check)
+        if (higher_foundation = true) and (Test1_test2 = true) and (input1_input2 = true) and (form_check = true){
+          console.log("good")
         }
         else {
-          buttons = false
-        }
-        if (inputcheck(input1,input2)){
-          inputs = true
-        }
-        else {
-          inputs = false
-        }
-        if (formcheck(form) == true){
-          formchecks = true
-        }
-        if ((buttons = true) && (inputs = true) && (formcheck = true)){
-          GradeCalculator()
-          error.classList.remove("error")
-          error.classList.add("hide")
-        }
-        else {
-          error.classList.remove("hide")
-          error.classList.add("error")
+          console.log("bad")
         }
       }
       //checking classes
@@ -211,7 +195,7 @@
       }
       //checking the input boxes
       function inputcheck(input1,input2){
-        if (input1.value !== "" && input2.value !== "" && input1.value >= input2.value){
+        if (input1 !== "" && input2 !== "" && input1 <= input2){
           var input = true
         }
         else {
@@ -220,14 +204,15 @@
         return input
       }
       // checking form
-      function formcheck(input1){
-        if (input1.value !== "Nothing"){
+      function formcheck(form){
+        if (form.value !== "Nothing"){
           var formtrue = true
-        }
+      }
       else {
         var formtrue = false
       }
-    }
+        return formtrue
+      }
     </script>
   </head>
 </html>
