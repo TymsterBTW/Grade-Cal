@@ -56,17 +56,14 @@
       </div>
       <div class="calc">
         <button type="button" class="buttonC disabled" id="calcu" onclick="colorcal(); checks()">Calculate</button>
-        <p class="hide" id="error">Please Input all <abbr title="You are missing one of the necessary inputs for the calculator to work">fields</abbr></p>
+        <p class="hide" id="error">Please enter valid inputs in all the <abbr title="You are missing one of the necessary inputs for the calculator to work">fields</abbr></p>
       </div>
       <div class="output">
         <p id="Result" class="result_text"">Your result is a Grade : <label id="result_text"></label></p>
       </div>
     </body>
     <script>
-      
-      
-      const percentage_margins = {
-        /*maths*/
+      var percentage_margins = {
         "MathsH1" : [3.75,7.5,11.25,17.5,28.75,40,52.5,68.75,85],
         "MathsH2" : [3.75,7.5,11.25,17.5,30,43.75,57.5,71.25,86.25],
         "MathsF1" : [10,20,31,42,53,53,53,53,53],
@@ -95,9 +92,7 @@
         /*computer science*/
         "Computer ScienceH1" : [10, 21.25,32.5,43.75,53.75,63.75,73.75,80,87.5],
         "Computer ScienceH2" : [11.25,22.5,33.75,46.25,53.75,61.25,68.75,76.25,85],
-
       }
-
       function color(x, y){
         var color = document.getElementById(x);
         if (color.classList.contains("disabled")) {
@@ -144,13 +139,13 @@
         gradecal(subjectAfter)
       }
       function gradecal(subjectHF12){
-        var parameter = percentage_margins[subjectHF12]
+        var parmater = percentage_margins[subjectHF12]
         var percentage = parseInt(document.getElementById('score').value) / parseInt(document.getElementById('total').value) * 100;
         for (let i = 1; i < 10; i++) {
-          if (percentage < parameter[0]) {
+          if (percentage < parmater[0]) {
             answer  = 1
         }
-          else if (percentage >= parameter[i]) {
+          else if (percentage >= parmater[i]) {
           var answer = i + 1
                     }
                 }
@@ -177,12 +172,14 @@
         var Test1_test2 = classchecks(Test1,Test2)
         var input1_input2 = inputcheck(input1,input2)
         var form_check = formcheck(form)
-        console.log(higher_foundation,Test1_test2,input1_input2,form_check)
         if ( (higher_foundation == true) && (Test1_test2 == true) && (input1_input2 == true) && (form_check == true) ) {
-          console.log("good")
+          GradeCalculator()
+          error.classList.remove("error")
+          error.classList.add("hide")
         }
         else {
-          console.log("bad")
+          error.classList.remove("hide")
+          error.classList.add("error")
         }
       }
       //checking classes
@@ -197,7 +194,7 @@
       }
       //checking the input boxes
       function inputcheck(input1,input2){
-        if ((input1 != "") && (input2 != "") && (input1 <= input2) ){
+        if ((input1 !== "") && (input2 !== "") && (input1 <= input2) ){
           var input = true
         }
         else {
@@ -215,6 +212,7 @@
       }
         return formtrue
       }
+      
     </script>
   </head>
 </html>
