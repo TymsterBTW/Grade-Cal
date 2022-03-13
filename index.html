@@ -194,13 +194,12 @@
       }
       //checking the input boxes
       function inputcheck(input1,input2){
-        if ((input1 !== "") && (input2 !== "") && (input1 <= input2) ){
-          var input = true
+        if ((input1 != "") && (input2 != "") && ( (input1  - input2)< 0)){
+          return true;
         }
         else {
-          var input = false
+          return false;
         }
-        return input
       }
       // checking form
       function formcheck(form){
