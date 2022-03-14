@@ -9,6 +9,7 @@
         <button class="header_text" onclick="location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">The Useful School Tools</button>
         <button class="header_text" onclick="location.href = 'https://www.desmos.com/calculator'" style="margin-left: 5px;">Graphing Calculator</button>
         <button class="header_text" onclick="location.href = 'https://mathsolver.microsoft.com/en/algebra-calculator'" style="margin-left: 5;">Algebraic Calculator</button>
+        <button class="header_text">Binary Calculator</button>
       </div>
       <div id="box">
         <div class="title"><b>Grade Calculator</b></div>
@@ -152,6 +153,7 @@
         document.getElementById("result_text").innerHTML = answer
       }
       function checks(){
+        document.getElementById('result_text').innerHTML = ""
         var error = document.getElementById('error')
         // butttons
         const higher = document.getElementById('Higher')
@@ -182,6 +184,12 @@
           error.classList.add("error")
         }
       }
+      function error_buttons(one,two){
+        console.log("error")
+        console.log(document.getElementById("error").title)
+        document.getElementById('error').aattr('title', 'testing')
+
+      }
       //checking classes
       function classchecks(input1,input2){
         if (input1.classList.contains("enabled") || input2.classList.contains("enabled")) {
@@ -194,7 +202,7 @@
       }
       //checking the input boxes
       function inputcheck(input1,input2){
-        if ((input1 != "") && (input2 != "") && ( (input1  - input2)< 0)){
+        if ((input1 != "") && (input2 != "") && ( (input1  - input2)< 0) || input1 == input2){
           return true;
         }
         else {

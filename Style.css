@@ -21,12 +21,16 @@
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 .hide {
   display: none;
 }
+.input::placeholder {
+  color: white;
+}
 .header_text {
-  color: black;
+  color: white;
   margin-top: 10px;
   cursor: pointer;
   border: none;
@@ -61,7 +65,7 @@
   margin-top: 2%;
 }
 .title {
-  color: black;
+  color: white;
   width: 40%;
   margin: auto;
   text-align: center;
@@ -85,7 +89,7 @@
 .input {
   border: none;
   border-bottom: 2px #47cca0 solid;
-  color: black;
+  color: white;
   width: 42%;
   height: 5%;
   border-radius: 7px;
@@ -123,11 +127,9 @@
 .testb:hover {
   background-color: #e0ffff;
 }
-
 .disabled {
   border: transparent;
 }
-
 .enabled {
   border: 2px #47cca0 solid;
   box-shadow: 0px -5px 10px#0e9485, 0px 5px 10px #0e9485, 5px 0px 10px #0e9485,
@@ -161,8 +163,10 @@
   border-radius: 8px;
   transition: 0.2s ease-in-out;
   text-align: center;
+  border-color: transparent;
   cursor: pointer;
   transition: 0.4s ease-in-out;
+  color: white;
 }
 #HIGHER {
   margin-left: 0px;
@@ -184,7 +188,7 @@
   width: auto;
   height: 42px;
   border: none;
-  color: black;
+  color: white;
   border-radius: 5px;
   appearance: none;
   outline: none;
@@ -208,15 +212,8 @@
   margin-right: auto;
   height: 6%;
 }
-.result_text {
-  margin-left: auto;
-  width: 50%;
-  margin-right: auto;
-}
 .error {
-  background-color: white;
-  box-shadow: 0px -5px 10px red, 0px 5px 10px red, 5px 0px 10px red,
-    -5px 0px 10px red;
+  border-color: red;
   color: red;
 }
 .calc {
@@ -242,9 +239,16 @@
   z-index: 100px;
   border-radius: 8px;
   transition: 0.2s ease-in-out;
-  text-align: center;
   cursor: pointer;
   transition: 0.5s ease-in-out;
+  color: white;
+}
+.result_text {
+  margin-left: auto;
+  width: 50%;
+  color: white;
+  margin-right: auto;
+  margin-bottom: 100px;
 }
 .buttonC:hover {
   border: 3px #47cca0 solid;
